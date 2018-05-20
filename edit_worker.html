@@ -1,0 +1,39 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ویرایش اطلاعات کارمند</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.basic.toast.js"></script>
+    <link rel="stylesheet" href="../css/darmaneh.css">
+    <link rel="stylesheet" href="../css/jquery.basic.toast.css">
+    <link rel="stylesheet" href="../css/add_worker.css">
+</head>
+<body>
+
+<div class="container-total margin-top50">
+
+    <div class="col-l12 col-m12 col-s12">
+
+        <div class="area-container">
+            <div class="col-l12 col-m12 col-s12">
+                <p class="title2 title">ویرایش اطلاعات کارمند</p>
+            </div>
+        </div>
+
+        <form class="col-l12 col-m12 col-s12" action="" method="post">
+            {% csrf_token %}
+
+            {{form}}
+
+            <input class="blue-btn" type = submit value="تایید">
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

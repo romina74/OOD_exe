@@ -1,0 +1,75 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>افزودن کارمند</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.basic.toast.js"></script>
+    <link rel="stylesheet" href="../css/darmaneh.css">
+    <link rel="stylesheet" href="../css/jquery.basic.toast.css">
+    <link rel="stylesheet" href="../css/add_worker.css">
+
+</head>
+<body>
+
+<div class="container-total margin-top50">
+
+    <div class="col-l12 col-m12 col-s12">
+
+        <div class="area-container">
+
+
+            <div class="col-l12 col-m12 col-s12">
+                <p class="title2 title">افزودن کارمند جدید</p>
+            </div>
+
+            <!--<div class="col-l12 col-m12 col-s12 margin-top15">-->
+            <!--<div class="col-l6 col-m6 col-s12">-->
+            <!--<div class="col-l1 col-m1 col-s12">-->
+            <!--<p class="label">نام: </p>-->
+            <!--</div>-->
+            <!--<div class="col-l11 col-m11 col-s12">-->
+            <!--<input class="input">-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-l6 col-m6 col-s12">-->
+            <!--<div class="col-l3 col-m3 col-s12">-->
+            <!--<p class="label">نام خانوادگی: </p>-->
+            <!--</div>-->
+            <!--<div class="col-l9 col-m9 col-s12">-->
+            <!--<input class="input">-->
+            <!--</div>-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="col-l6 col-m6 col-s12">-->
+            <!--<div class="col-l3 col-m3 col-s12">-->
+            <!--<p class="label">شماره کارمند: </p>-->
+            <!--</div>-->
+            <!--<div class="col-l9 col-m9 col-s12">-->
+            <!--<input class="input">-->
+            <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="col-l12 col-m12 col-s12">-->
+            <!--<div class="col-l3 col-m3 col-s12 h-center margin-top50">-->
+            <!--<button class="submit-criteria blue-btn">تایید</button>-->
+            <!--</div>-->
+            <!--</div>-->
+
+
+            <form class="col-l12 col-m12 col-s12" action="" method="post">
+                {% csrf_token %}
+                {{form}}
+                <input type="submit" class="blue-btn" value="افزودن">
+            </form>
+
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

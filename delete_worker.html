@@ -1,0 +1,58 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>پاک کردن کارمند</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/jquery.basic.toast.js"></script>
+    <link rel="stylesheet" href="../css/darmaneh.css">
+    <link rel="stylesheet" href="../css/jquery.basic.toast.css">
+    <link rel="stylesheet" href="../css/add_worker.css">
+
+</head>
+<body>
+
+
+<div class="container-total margin-top50">
+
+    <div class="col-l12 col-m12 col-s12">
+
+        <div class="area-container">
+
+
+            <div class="col-l12 col-m12 col-s12">
+                <p class="title2 title">پاک کردن کارمند</p>
+            </div>
+
+            <div class="col-l12 col-m12 col-s12 margin-top50">
+                <p class="label">جهت پاک کردن کارمند از سیستم، پس از وارد کردن شماره ی کارمندی وی، بر روی گزینه ی خذف
+                    کلیلک نمایید</p>
+            </div>
+
+            <div class="col-l12 col-m12 col-s12">
+                <div class="col-l6 col-m6 col-s12">
+
+                    <div class="col-l3 col-m3 col-s12">
+                        <p class="label">شماره ی کارمند :‌</p>
+                    </div>
+
+                    <form class="col-l9 col-m9 col-s12" action="" method="post">
+                      {% csrf_token %}
+                        {{form}}
+                        <input class="blue-btn" value="خذف" type="submit">
+                    </form>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
