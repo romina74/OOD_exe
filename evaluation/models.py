@@ -23,6 +23,10 @@ class SingletonModel(models.Model):
         return obj
 
 
+class Job(models.Model):
+    salary = models.IntegerField()
+    title = models.CharField(max_length=20)
+
 class Person(User):
     employeeId = models.IntegerField(primary_key=True)
     job = models.ForeignKey(Job, on_delete=models.CASCADE)
@@ -30,10 +34,10 @@ class Person(User):
 
 class PersonCatalog(SingletonModel):
     def addPerson(self, first_name, last_name, password, employeeId):
-        job=EmployeeCatalog.load()
-        job.
+        job=EmployeeCatalog.load().addEmployee()
         person = Person.objects.create(first_name=first_name, last_name=last_name, password=password,
-                                       employeeId=employeeId,job=)
+                                       employeeId=employeeId,job=job)
+        return person
 
     def editPerson(self, employeeId, password):
         person = Person.objects.get(employeeId=employeeId)
@@ -50,24 +54,22 @@ class PersonCatalog(SingletonModel):
 class PersonFormRegister(forms.ModelForm):
     class Meta:
         model = Person
-        fields = ('first_name', 'last_name', 'employeeId', 'password')
+        fields = ('first_name', 'last_name', 'employeeId', 'password',)
 
 
 class PersonFormEdit(forms.ModelForm):
     class Meta:
         model = Person
-        fields = ('employeeId', 'password')
+        fields = ('employeeId', 'password',)
 
 
 class PersonFormDelete(forms.ModelForm):
     class Meta:
         model = Person
-        fields = ('employeeId')
+        fields = ('employeeId',)
 
 
-class Job(models.Model):
-    salary = models.IntegerField()
-    title = models.CharField(max_length=20)
+
 
 
 class Employee(Job):
@@ -79,3 +81,4 @@ class EmployeeCatalog(SingletonModel):
 
     def addEmployee(self):
         employee = Employee.objects.create()
+        return employee
