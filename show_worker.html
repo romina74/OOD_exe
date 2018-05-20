@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>نمایش کارمندان</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static " evaluation/darmaneh.css" %}">
+    <link rel="stylesheet" href="{% static " evaluation/add_worker.css" %}">-
+
+</head>
+<body>
+
+
+<div class="container-total margin-top50">
+
+    <div class="col-l12 col-m12 col-s12">
+
+        <div class="area-container" style="overflow: auto">
+            <div class="col-l12 col-m12 col-s12">
+                <p class="title2 title">لیست کارمند</p>
+            </div>
+
+            <div class="col-l12 col-m12 col-s12">
+
+                {{employees}}
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>
